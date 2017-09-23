@@ -9,5 +9,16 @@
   <div>
     <a href="https://tutorial.djangogirls.org/it">Thanks Django Girls!</a>
   </div>
+
+  <div>
+    {% for post in posts %}
+      <div>
+        <p>published: {{post.published_date}}</p>
+        <h1><a href="">{{post.title}}</a></h1>
+        <p>{{ post.text|linebreaksbr}}</p>
+        <p>----------<br></p>
+      </div>
+    {%endfor %}
+  </div>
   </body>
 </html>
